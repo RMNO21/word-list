@@ -16,7 +16,7 @@ pip install wordlist-tool
 Or, if you’re working from source:
 
 ```bash
-git clone https://github.com/yourusername/wordlist-tool.git
+git clone https://github.com/RMNO21/wordlist-tool.git
 cd wordlist-tool
 pip install .
 ```
@@ -62,7 +62,7 @@ wordlist-tool filter --input biglist.txt --min-length 6 --max-length 12
 Clone the repo and install in editable mode:
 
 ```bash
-git clone https://github.com/yourusername/wordlist-tool.git
+git clone https://github.com/RMNO21/wordlist-tool.git
 cd wordlist-tool
 pip install -e .
 ```
@@ -87,10 +87,3 @@ For major changes, please open an issue first to discuss what you’d like to ch
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
-
-👉 Raman, since you’re preparing this for public release, you’ll want to:
-- Replace `yourusername` with your actual GitHub username.  
-- Add **real examples** that match your tool’s functionality.  
-- Include badges (PyPI version, build status, etc.) if you want polish.  
-
-Would you like me to also draft a **requirements.txt + setup.py/pyproject.toml snippet** so people can install your tool cleanly from source? That way your README and packaging will align perfectly.
