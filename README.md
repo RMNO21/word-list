@@ -1,89 +1,80 @@
-# 🔑 Wordlist-Tool
+🔡 Wordlist-Tool
 
-A simple yet powerful Python tool for generating and managing custom wordlists.  
-Perfect for automation, security research, or any workflow that needs flexible list generation.
+A flexible Python CLI tool for generating wordlists from user‑defined inputs.It supports permutations, product combinations, separators, and OR‑options, making it useful for automation, security research, or custom scripting.
 
----
+📦 Installation
 
-## 📦 Installation
+From PyPI:
 
-You can install directly from PyPI:
-
-```bash
 pip install wordlist-tool
-```
 
-Or, if you’re working from source:
+From source:
 
-```bash
 git clone https://github.com/RMNO21/wordlist-tool.git
 cd wordlist-tool
 pip install .
-```
 
----
+🚀 Usage
 
-## 🚀 Usage
+After installation, run:
 
-After installation, the tool is available as a CLI command:
+wordlist-tool
 
-```bash
-wordlist-tool --help
-```
+The tool will:
 
-### Example: Generate a wordlist from a file
-```bash
-wordlist-tool generate --input words.txt --output mylist.txt
-```
+Ask you to enter possible words (you can use , for OR options).
 
-### Example: Combine multiple lists
-```bash
-wordlist-tool merge list1.txt list2.txt --output merged.txt
-```
+Let you specify the loop number (between 1 and 10).
 
-### Example: Apply filters
-```bash
-wordlist-tool filter --input biglist.txt --min-length 6 --max-length 12
-```
+Ask for a separator (optional).
 
----
+Generate all permutations and product combinations.
 
-## ⚙️ Features
-- Generate wordlists from text files or stdin  
-- Merge multiple lists into one  
-- Apply filters (length, charset, etc.)  
-- Save results to file or print to stdout  
-- Lightweight, fast, and scriptable  
+Example Run
 
----
+enter the possible words
+enter the possible words (use ',' for OR options)
+print <done> or when blank, press <enter> to complete
+1: admin,user
+2: pass,1234
+3: done
+enter the loop number: 2
+enter the separator, like '@' , '$' , '&' ... : (press enter to fill blank)
 
-## 🛠 Development
+Output:
 
-Clone the repo and install in editable mode:
+admin@pass
+admin@1234
+user@pass
+user@1234
+pass@admin
+1234@admin
+...
 
-```bash
-git clone https://github.com/RMNO21/wordlist-tool.git
-cd wordlist-tool
+⚙️ Features
+
+Accepts multiple word inputs with OR options (word1,word2)
+
+Generates permutations up to user‑defined loop count
+
+Supports custom separators (@, $, &, etc.)
+
+Prints results directly to stdout (redirect to file if needed)
+
+🛠 Development
+
+Editable install for development:
+
 pip install -e .
-```
 
 Run tests:
 
-```bash
 pytest
-```
 
----
+📜 License
 
-## 🤝 Contributing
+This project is licensed under the GNU General Public License v2.0 or later.See the LICENSE file for details.
 
-Pull requests are welcome!  
-For major changes, please open an issue first to discuss what you’d like to change.
+🤝 Contributing
 
----
-
-## 📜 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
----
+Pull requests are welcome!For major changes, please open an issue first to discuss what you’d like to change.
